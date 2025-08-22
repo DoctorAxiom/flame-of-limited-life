@@ -1,2 +1,2 @@
 # flame-of-limited-life
-A datapack for minecraft enabling play of a game similar to Grian's Limited Life
+A datapack for minecraft enabling play of a game similar to Grian's Limited Life, initially created for the Flame of Life group
