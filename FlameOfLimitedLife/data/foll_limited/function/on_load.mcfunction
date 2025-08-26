@@ -9,18 +9,7 @@ execute if score #foll_tracker foll_session_running matches 0 run scoreboard pla
 scoreboard players set #foll_tracker foll_session_running 0
 
 # if initialized already, will not reset, otherwise will initiate this scoreboard variable
-execute unless score #foll_tracker foll_initialized matches 1 run scoreboard players set #foll_tracker foll_initialized 0
-execute if score #foll_tracker foll_initialized matches 0 run function foll_limited:setup_initial
-
-
-summon armor_stand ~ ~ ~ {ShowArms:1b,Invulnerable:1b,NoGravity:1b,Tags:["foll_temp_spawn_marker"]}
-
-execute store result score #foll_tracker foll_player_xpos run data get entity @e[type=minecraft:armor_stand,tag=foll_temp_spawn_marker,limit=1] Pos[0] 64
-execute store result score #foll_tracker foll_player_ypos run data get entity @e[type=minecraft:armor_stand,tag=foll_temp_spawn_marker,limit=1] Pos[1] 64
-execute store result score #foll_tracker foll_player_zpos run data get entity @e[type=minecraft:armor_stand,tag=foll_temp_spawn_marker,limit=1] Pos[2] 64
-
-scoreboard players set #foll_tracker foll_player_xrot 0
-scoreboard players set #foll_tracker foll_player_yrot 0
-
-kill @e[type=minecraft:armor_stand,tag=foll_temp_spawn_marker,limit=1]
+execute if score #foll_tracker foll_initialized matches 1 run return 0
+scoreboard players set #foll_tracker foll_initialized 0
+function foll_limited:setup_initial
 

@@ -96,13 +96,15 @@ scoreboard objectives add foll_player_yrot dummy
 
 
 #> Detection objectives for killing different colors, mobs, deaths
-scoreboard objectives remove foll_player_deathdetect deathCount
+scoreboard objectives remove foll_player_deathdetect
 
 scoreboard objectives remove foll_player_greenkilldetect
 scoreboard objectives remove foll_player_yellowkilldetect
 scoreboard objectives remove foll_player_redkilldetect
 
 scoreboard objectives remove foll_player_mobkilldetect
+
+scoreboard objectives add foll_player_deathdetect deathCount
 
 scoreboard objectives add foll_player_greenkilldetect teamkill.green
 scoreboard objectives add foll_player_yellowkilldetect teamkill.yellow
