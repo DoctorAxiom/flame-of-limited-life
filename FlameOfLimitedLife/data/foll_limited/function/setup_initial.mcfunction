@@ -1,6 +1,10 @@
 #> exits the function if already initialized
 execute if score #foll_tracker foll_initialized matches 1 run return 0
 
+#> Remove any player tags that were previously initialized
+tag @a remove foll-limited-player
+tag @a remove foll-has-started
+
 #> Player test var
 scoreboard objectives remove foll_playertestvar
 scoreboard objectives add foll_playertestvar dummy
@@ -90,18 +94,15 @@ scoreboard objectives add foll_player_zpos dummy
 scoreboard objectives add foll_player_xrot dummy
 scoreboard objectives add foll_player_yrot dummy
 
-scoreboard players operation @a foll_player_xpos = #foll_tracker foll_player_xpos
-scoreboard players operation @a foll_player_ypos = #foll_tracker foll_player_ypos
-scoreboard players operation @a foll_player_zpos = #foll_tracker foll_player_zpos
 
-scoreboard players operation @a foll_player_xrot = #foll_tracker foll_player_xrot
-scoreboard players operation @a foll_player_yrot = #foll_tracker foll_player_yrot
+#> Detection objectives for killing different colors, mobs, deaths
+scoreboard objectives remove foll_player_deathdetect deathCount
 
-
-#> Detection objectives for killing different colors, mobs
 scoreboard objectives remove foll_player_greenkilldetect
 scoreboard objectives remove foll_player_yellowkilldetect
 scoreboard objectives remove foll_player_redkilldetect
+
+scoreboard objectives remove foll_player_mobkilldetect
 
 scoreboard objectives add foll_player_greenkilldetect teamkill.green
 scoreboard objectives add foll_player_yellowkilldetect teamkill.yellow
