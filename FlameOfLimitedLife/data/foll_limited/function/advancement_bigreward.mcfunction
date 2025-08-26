@@ -1,0 +1,1 @@
+function foll_limited:lifetime_reward {title:"+2m", subtitle:"For getting a difficult advancement.", ticks:"2400"}

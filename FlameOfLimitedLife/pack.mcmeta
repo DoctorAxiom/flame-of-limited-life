@@ -1,0 +1,7 @@
+{
+  "pack": {
+    "description": "A PVP survival game for Flame of Life based on Grian's Limited Life",
+    "pack_format": 81,
+    "supported_formats": [81,83.1]
+  }
+}

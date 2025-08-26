@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"G",
+		"S"
+	],
+	"key": {
+		"S": "minecraft:soul_sand",
+		"G": "minecraft:ghast_tear"
+	},
+	"result": {
+		"id": "minecraft:dried_ghast"
+	}
+}
