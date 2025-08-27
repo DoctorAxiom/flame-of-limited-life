@@ -34,6 +34,7 @@ execute as @a[tag=foll-limited-player, scores={foll_player_deathdetect=1..}] run
 #> Reset all detection scores to 0
 scoreboard players set @a[tag=foll-limited-player] foll_player_deathdetect 0
 
+scoreboard players set @a[tag=foll-limited-player] foll_player_dkgreenkilldetect 0
 scoreboard players set @a[tag=foll-limited-player] foll_player_greenkilldetect 0
 scoreboard players set @a[tag=foll-limited-player] foll_player_yellowkilldetect 0
 scoreboard players set @a[tag=foll-limited-player] foll_player_redkilldetect 0

@@ -15,7 +15,8 @@ execute store result storage foll_limited:tmp teamvar.s int 1 run scoreboard pla
 execute if score @s foll_player_lifetime_s matches 0..9 run data modify storage foll_limited:tmp teamvar.spad set value "0"
 execute if score @s foll_player_lifetime_s matches 10.. run data modify storage foll_limited:tmp teamvar.spad set value ""
 
-data modify storage foll_limited:tmp teamvar.color set value "green"
+data modify storage foll_limited:tmp teamvar.color set value "dark_green"
+execute if score @s foll_player_lifetime < #foll_tracker foll_green_life run data modify storage foll_limited:tmp teamvar.color set value "green"
 execute if score @s foll_player_lifetime < #foll_tracker foll_yellow_life run data modify storage foll_limited:tmp teamvar.color set value "yellow"
 execute if score @s foll_player_lifetime < #foll_tracker foll_red_life run data modify storage foll_limited:tmp teamvar.color set value "red"
 

@@ -29,6 +29,7 @@ scoreboard players set #foll_tracker foll_100_const 100
 
 #> Customizable parameters of the game
 scoreboard objectives remove foll_starting_life
+scoreboard objectives remove foll_green_life
 scoreboard objectives remove foll_yellow_life
 scoreboard objectives remove foll_red_life
 scoreboard objectives remove foll_session_duration
@@ -40,6 +41,7 @@ scoreboard objectives remove foll_advancement_bigreward
 scoreboard objectives remove foll_mobkill_reward
 
 scoreboard objectives add foll_starting_life dummy
+scoreboard objectives add foll_green_life dummy
 scoreboard objectives add foll_yellow_life dummy
 scoreboard objectives add foll_red_life dummy
 scoreboard objectives add foll_session_duration dummy
@@ -51,9 +53,10 @@ scoreboard objectives add foll_advancement_reward dummy
 scoreboard objectives add foll_advancement_bigreward dummy
 scoreboard objectives add foll_mobkill_reward dummy
 
-scoreboard players set #foll_tracker foll_starting_life 576000
+scoreboard players set #foll_tracker foll_starting_life 864000
+scoreboard players set #foll_tracker foll_green_life 576000
 scoreboard players set #foll_tracker foll_yellow_life 288000
-scoreboard players set #foll_tracker foll_red_life 72000
+scoreboard players set #foll_tracker foll_red_life 144000
 scoreboard players set #foll_tracker foll_session_duration 144000
 scoreboard players set #foll_tracker foll_kill_reward 18000
 scoreboard players set #foll_tracker foll_kill_penalty 12000
@@ -102,6 +105,7 @@ scoreboard objectives add foll_player_yrot dummy
 #> Detection objectives for killing different colors, mobs, deaths
 scoreboard objectives remove foll_player_deathdetect
 
+scoreboard objectives remove foll_player_dkgreenkilldetect
 scoreboard objectives remove foll_player_greenkilldetect
 scoreboard objectives remove foll_player_yellowkilldetect
 scoreboard objectives remove foll_player_redkilldetect
@@ -110,6 +114,7 @@ scoreboard objectives remove foll_player_mobkilldetect
 
 scoreboard objectives add foll_player_deathdetect deathCount
 
+scoreboard objectives add foll_player_dkgreenkilldetect teamkill.dark_green
 scoreboard objectives add foll_player_greenkilldetect teamkill.green
 scoreboard objectives add foll_player_yellowkilldetect teamkill.yellow
 scoreboard objectives add foll_player_redkilldetect teamkill.red
