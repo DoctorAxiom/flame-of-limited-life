@@ -85,5 +85,8 @@
       "minecraft:warm"
     ]
   ],
+  "rewards": {
+    "function": "foll_limited:advancement_bigreward"
+  },
   "sends_telemetry_event": true
 }

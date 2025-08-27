@@ -1,11 +1,14 @@
 #> Function to call to start a session
 
 #> Catch if not initiated yet
-execute if score #foll_tracker foll_initialized matches 0 run say "You must run function foll_limited:setup_initial before running any other functions."
 execute if score #foll_tracker foll_initialized matches 0 run return 0
+
+#> Catch if already started
+execute unless score #foll_tracker foll_session_time matches -1 run dialog show @s {type:"minecraft:notice",title:"Current session was ALREADY STARTED. This function will do nothing.",yes:{label:"OK"}}
+execute unless score #foll_tracker foll_session_time matches -1 run return fail
 
 #if this is the first session this will add the foll-has-started tag to everyone.
 tag @a[tag=foll-limited-player] add foll-has-started
 
-scoreboard players set #foll_tracker foll_session_time 0
+scoreboard players operation #foll_tracker foll_session_time = #foll_tracker foll_session_duration
 function foll_limited:session_unpause

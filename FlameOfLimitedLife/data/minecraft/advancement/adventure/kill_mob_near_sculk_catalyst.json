@@ -23,5 +23,8 @@
       "kill_mob_near_sculk_catalyst"
     ]
   ],
+  "rewards": {
+    "function": "foll_limited:advancement_reward"
+  },
   "sends_telemetry_event": true
 }

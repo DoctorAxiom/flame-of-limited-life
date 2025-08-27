@@ -46,7 +46,8 @@
     ]
   ],
   "rewards": {
-    "experience": 40
+    "experience": 40,
+    "function": "foll_limited:advancement_reward"
   },
   "sends_telemetry_event": true
 }

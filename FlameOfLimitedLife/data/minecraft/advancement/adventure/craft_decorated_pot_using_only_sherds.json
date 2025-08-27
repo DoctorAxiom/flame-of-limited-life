@@ -47,5 +47,8 @@
       "pot_crafted_using_only_sherds"
     ]
   ],
+  "rewards": {
+    "function": "foll_limited:advancement_reward"
+  },
   "sends_telemetry_event": true
 }

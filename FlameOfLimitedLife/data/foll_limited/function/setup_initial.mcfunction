@@ -16,11 +16,6 @@ scoreboard objectives add foll_session_time dummy
 scoreboard objectives remove foll_session_running
 scoreboard objectives add foll_session_running dummy
 
-#This only resets session time if the foll_session_running is false
-#Meant to catch server crashes so that a session may be resumed partway.
-scoreboard players set #foll_tracker foll_session_time -1
-scoreboard players set #foll_tracker foll_session_running 0
-
 #> Conversion constants
 scoreboard objectives remove foll_20_const
 scoreboard objectives remove foll_60_const
@@ -40,6 +35,9 @@ scoreboard objectives remove foll_session_duration
 scoreboard objectives remove foll_kill_reward
 scoreboard objectives remove foll_kill_penalty
 scoreboard objectives remove foll_death_penalty
+scoreboard objectives remove foll_advancement_reward
+scoreboard objectives remove foll_advancement_bigreward
+scoreboard objectives remove foll_mobkill_reward
 
 scoreboard objectives add foll_starting_life dummy
 scoreboard objectives add foll_yellow_life dummy
@@ -49,6 +47,9 @@ scoreboard objectives add foll_kill_reward dummy
 scoreboard objectives add foll_kill_penalty dummy
 scoreboard objectives add foll_death_penalty dummy
 scoreboard objectives add foll_boogey_multiplier dummy
+scoreboard objectives add foll_advancement_reward dummy
+scoreboard objectives add foll_advancement_bigreward dummy
+scoreboard objectives add foll_mobkill_reward dummy
 
 scoreboard players set #foll_tracker foll_starting_life 576000
 scoreboard players set #foll_tracker foll_yellow_life 288000
@@ -58,6 +59,9 @@ scoreboard players set #foll_tracker foll_kill_reward 18000
 scoreboard players set #foll_tracker foll_kill_penalty 12000
 scoreboard players set #foll_tracker foll_death_penalty 24000
 scoreboard players set #foll_tracker foll_boogey_multiplier 3
+scoreboard players set #foll_tracker foll_advancement_reward 600
+scoreboard players set #foll_tracker foll_advancement_bigreward 2400
+scoreboard players set #foll_tracker foll_mobkill_reward 20
 
 #>Loop indices
 scoreboard objectives remove foll_teamloop_index
@@ -135,6 +139,11 @@ scoreboard objectives add foll_spawn_windcharge trigger
 scoreboard objectives add foll_spawn_notchapple trigger
 scoreboard objectives add foll_resistancetoggle trigger
 scoreboard objectives add foll_weaknesstoggle trigger
+
+#> Initial session time set
+# -1 means that there is no active session.
+scoreboard players set #foll_tracker foll_session_time -1
+scoreboard players set #foll_tracker foll_session_running 0
 
 #> Finalize Set up flag
 scoreboard players set #foll_tracker foll_initialized 1

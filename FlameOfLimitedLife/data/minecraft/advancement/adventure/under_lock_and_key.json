@@ -43,5 +43,8 @@
       "under_lock_and_key"
     ]
   ],
+  "rewards": {
+    "function": "foll_limited:advancement_bigreward"
+  },
   "sends_telemetry_event": true
 }

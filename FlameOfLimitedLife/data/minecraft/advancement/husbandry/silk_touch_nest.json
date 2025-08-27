@@ -38,5 +38,8 @@
       "silk_touch_nest"
     ]
   ],
+  "rewards": {
+    "function": "foll_limited:advancement_bigreward"
+  },
   "sends_telemetry_event": true
 }

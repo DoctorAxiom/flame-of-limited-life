@@ -11,6 +11,8 @@ scoreboard players operation @a foll_player_zpos = #foll_tracker foll_player_zpo
 scoreboard players operation @a foll_player_xrot = #foll_tracker foll_player_xrot
 scoreboard players operation @a foll_player_yrot = #foll_tracker foll_player_yrot
 
+# Set initial lifetime of all players
+scoreboard players operation @a foll_player_lifetime = #foll_tracker foll_starting_life
 
 #This part dynamically creates a new team for each player currently on the server, and then adds them to that team.
 scoreboard players set #foll_tracker foll_teamloop_index 0

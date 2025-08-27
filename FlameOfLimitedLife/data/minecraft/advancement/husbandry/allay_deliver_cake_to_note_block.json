@@ -41,5 +41,8 @@
       "allay_deliver_cake_to_note_block"
     ]
   ],
+  "rewards": {
+    "function": "foll_limited:advancement_bigreward"
+  },
   "sends_telemetry_event": true
 }

@@ -189,7 +189,8 @@
     ]
   ],
   "rewards": {
-    "experience": 50
+    "experience": 50,
+    "function": "foll_limited:advancement_bigreward"
   },
   "sends_telemetry_event": true
 }

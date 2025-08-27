@@ -50,5 +50,8 @@
       "lightning_rod_with_villager_no_fire"
     ]
   ],
+  "rewards": {
+    "function": "foll_limited:advancement_bigreward"
+  },
   "sends_telemetry_event": true
 }
