@@ -19,5 +19,6 @@ data modify storage foll_limited:tmp teamvar.color set value "dark_green"
 execute if score @s foll_player_lifetime < #foll_tracker foll_green_life run data modify storage foll_limited:tmp teamvar.color set value "green"
 execute if score @s foll_player_lifetime < #foll_tracker foll_yellow_life run data modify storage foll_limited:tmp teamvar.color set value "yellow"
 execute if score @s foll_player_lifetime < #foll_tracker foll_red_life run data modify storage foll_limited:tmp teamvar.color set value "red"
+execute if entity @s[tag=foll-ghost] run data modify storage foll_limited:tmp teamvar.color set value "gray"
 
 function foll_limited:dynamic_updateteam with storage foll_limited:tmp teamvar
