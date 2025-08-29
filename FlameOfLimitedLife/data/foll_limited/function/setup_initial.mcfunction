@@ -110,6 +110,9 @@ scoreboard objectives remove foll_player_greenkilldetect
 scoreboard objectives remove foll_player_yellowkilldetect
 scoreboard objectives remove foll_player_redkilldetect
 
+scoreboard objectives remove foll_player_goodkilldetect
+scoreboard objectives remove foll_player_badkilldetect
+
 scoreboard objectives remove foll_player_mobkilldetect
 
 scoreboard objectives add foll_player_deathdetect deathCount
@@ -119,13 +122,20 @@ scoreboard objectives add foll_player_greenkilldetect teamkill.green
 scoreboard objectives add foll_player_yellowkilldetect teamkill.yellow
 scoreboard objectives add foll_player_redkilldetect teamkill.red
 
+scoreboard objectives add foll_player_goodkilldetect dummy
+scoreboard objectives add foll_player_badkilldetect dummy
+
 scoreboard objectives add foll_player_mobkilldetect minecraft.custom:minecraft.mob_kills
 
 #> Set of trigger-able objectives
 # foll_claimkill - should be used by players to claim an indirect kill
-# foll_claimaccident - should be used by players to claim an indirect accident
+# foll_claimaccident - should be used by players to claim an indirect accident bad kill
 #                      (for which they should receive a penalty)
+# foll_playermenu can be used to open a menu of all the player actions (which can also be done via trigger)
+# foll_opmenu opens the op menu to adjust parameters of the game. It requires elevated permissions.
+
 scoreboard objectives remove foll_opmenu
+scoreboard objectives remove foll_playermenu
 
 scoreboard objectives remove foll_claimkill
 scoreboard objectives remove foll_claimaccident
@@ -136,6 +146,7 @@ scoreboard objectives remove foll_resistancetoggle
 scoreboard objectives remove foll_weaknesstoggle
 
 scoreboard objectives add foll_opmenu trigger
+scoreboard objectives add foll_playermenu trigger
 
 scoreboard objectives add foll_claimkill trigger
 scoreboard objectives add foll_claimaccident trigger

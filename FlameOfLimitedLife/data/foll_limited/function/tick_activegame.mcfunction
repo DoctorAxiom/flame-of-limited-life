@@ -36,7 +36,7 @@ execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run particle minecr
 execute as @a[tag=foll-limited-player, scores={foll_player_deathdetect=1..}] run function foll_limited:event_deathdetect
 
 #> Detect player kills
-
+execute as @a[tag=foll-limited-player, tag=!foll-ghost] run function foll_limited:tick_killdetect
 
 #> Reset all detection scores to 0
 scoreboard players set @a[tag=foll-limited-player] foll_player_deathdetect 0
@@ -50,17 +50,19 @@ scoreboard players set @a[tag=foll-limited-player] foll_player_mobkilldetect 0
 
 
 #> Reset triggers
-execute as @a[tag=foll-limited-player] run execute if score @s foll_opmenu matches 1.. run scoreboard players set @s foll_opmenu 0
+execute as @a[tag=foll-limited-player] if score @s foll_opmenu matches 1.. run scoreboard players set @s foll_opmenu 0
+execute as @a[tag=foll-limited-player] if score @s foll_playermenu matches 1.. run scoreboard players set @s foll_playermenu 0
 
-execute as @a[tag=foll-limited-player] run execute if score @s foll_claimkill matches 1.. run scoreboard players set @s foll_claimkill 0
-execute as @a[tag=foll-limited-player] run execute if score @s foll_claimaccident matches 1.. run scoreboard players set @s foll_claimaccident 0
+execute as @a[tag=foll-limited-player] if score @s foll_claimkill matches 1.. run scoreboard players set @s foll_claimkill 0
+execute as @a[tag=foll-limited-player] if score @s foll_claimaccident matches 1.. run scoreboard players set @s foll_claimaccident 0
 
-execute as @a[tag=foll-limited-player] run execute if score @s foll_spawn_windcharge matches 1.. run scoreboard players set @s foll_spawn_windcharge 0
-execute as @a[tag=foll-limited-player] run execute if score @s foll_spawn_notchapple matches 1.. run scoreboard players set @s foll_spawn_notchapple 0
-execute as @a[tag=foll-limited-player] run execute if score @s foll_resistancetoggle matches 1.. run scoreboard players set @s foll_resistancetoggle 0
-execute as @a[tag=foll-limited-player] run execute if score @s foll_weaknesstoggle matches 1.. run scoreboard players set @s foll_weaknesstoggle 0
+execute as @a[tag=foll-limited-player] if score @s foll_spawn_windcharge matches 1.. run scoreboard players set @s foll_spawn_windcharge 0
+execute as @a[tag=foll-limited-player] if score @s foll_spawn_notchapple matches 1.. run scoreboard players set @s foll_spawn_notchapple 0
+execute as @a[tag=foll-limited-player] if score @s foll_resistancetoggle matches 1.. run scoreboard players set @s foll_resistancetoggle 0
+execute as @a[tag=foll-limited-player] if score @s foll_weaknesstoggle matches 1.. run scoreboard players set @s foll_weaknesstoggle 0
 
 scoreboard players enable @a[tag=foll-limited-player] foll_opmenu
+scoreboard players enable @a[tag=foll-limited-player] foll_playermenu
 
 scoreboard players enable @a[tag=foll-limited-player] foll_claimkill
 scoreboard players enable @a[tag=foll-limited-player] foll_claimaccident
