@@ -10,5 +10,7 @@ execute unless score #foll_tracker foll_session_time matches -1 run return fail
 #if this is the first session this will add the foll-has-started tag to everyone.
 tag @a[tag=foll-limited-player] add foll-has-started
 
+tellraw @a {text:"Session has started!", bold: true, color: "yellow"}
+
 scoreboard players operation #foll_tracker foll_session_time = #foll_tracker foll_session_duration
 function foll_limited:session_unpause

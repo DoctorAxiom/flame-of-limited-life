@@ -83,3 +83,21 @@ scoreboard players enable @a[tag=foll-limited-player] foll_weaknesstoggle
 scoreboard players remove @a[tag=foll-limited-player, scores={foll_player_lifetime=1..}] foll_player_lifetime 1
 execute as @a[tag=foll-limited-player, tag=!foll-ghost, scores={foll_player_lifetime=..0}] run function foll_limited:event_outoflifetime
 scoreboard players set @a[tag=foll-limited-player, scores={foll_player_lifetime=..0}] foll_player_lifetime 0
+
+#> Decrement 1 each tick from session time, broadcast messages for low times.
+execute if score #foll_tracker foll_session_time matches 72000 run tellraw @a {text:"1h remaining in this session.", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 36000 run tellraw @a {text:"30m remaining in this session.", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 12000 run tellraw @a {text:"10m remaining in this session.", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 6000 run tellraw @a {text:"5m remaining in this session.", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 1200 run tellraw @a {text:"1m remaining in this session!", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 200 run tellraw @a {text:"10 SECONDS REMAIN THIS SESSION!", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 100 run tellraw @a {text:"5s to session end.", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 80 run tellraw @a {text:"4s to session end.", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 60 run tellraw @a {text:"3s to session end.", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 40 run tellraw @a {text:"2s to session end.", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 20 run tellraw @a {text:"1s to session end.", color:"yellow", bold:true}
+
+execute if score #foll_tracker foll_session_time matches 0.. run scoreboard players remove #foll_tracker foll_session_time 1
+
+#> end session if time is out.
+execute if score #foll_tracker foll_session_time matches ..-1 run function foll_limited:session_end
