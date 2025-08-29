@@ -32,6 +32,9 @@ execute as @a[tag=foll-limited-player] run function foll_limited:store_player_po
 #> Ghost effects
 execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run particle minecraft:ominous_spawning ~ ~1.5 ~ 0.2 0.2 0.2 0.2 1 force
 
+#> Detect player mob kills
+execute as @a[tag=foll-limited-player, scores={foll_player_mobkilldetect=1..}] run function foll_limited:event_mobkill
+
 #> Detect player deaths
 execute as @a[tag=foll-limited-player, scores={foll_player_deathdetect=1..}] run function foll_limited:event_deathdetect
 

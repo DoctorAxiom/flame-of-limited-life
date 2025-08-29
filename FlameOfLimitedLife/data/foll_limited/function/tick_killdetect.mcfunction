@@ -9,6 +9,9 @@ scoreboard players set @s foll_player_goodkilldetect 0
 scoreboard players operation @s foll_player_badkilldetect += @s foll_claimaccident
 scoreboard players operation @s foll_player_goodkilldetect += @s foll_claimkill
 
+execute if score @s foll_claimkill matches 1.. run tellraw @a {text:"Note: ", color:"yellow", extra:[{selector:"@s", bold:true}, " is claiming a ", {text:"reward", color:"green", bold:true}, " for ", {score:{name:"@s", objective:"foll_claimkill"}, bold:true}, " undetected valid player kills."]}
+execute if score @s foll_claimaccident matches 1.. run tellraw @a {text:"Note: ", color:"yellow", extra:[{selector:"@s", bold:true}, " is claiming a ", {text:"penalty", color:"red", bold:true}, " for ", {score:{name:"@s", objective:"foll_claimaccident"}, bold:true}, " undetected invalid player kills."]}
+
 execute if score @s foll_player_lifetime >= #foll_tracker foll_yellow_life run scoreboard players operation @s foll_player_badkilldetect += @s foll_player_dkgreenkilldetect
 execute if score @s foll_player_lifetime < #foll_tracker foll_yellow_life run scoreboard players operation @s foll_player_goodkilldetect += @s foll_player_dkgreenkilldetect
 
