@@ -13,3 +13,7 @@ scoreboard players set #foll_tracker foll_session_running 1
 
 #> TP all players to their previous locations when the game was last running.
 execute as @a run function foll_limited:tp_stored_pos
+
+#>Resume daytime and weather progression
+gamerule doDaylightCycle true
+gamerule doWeatherCycle true

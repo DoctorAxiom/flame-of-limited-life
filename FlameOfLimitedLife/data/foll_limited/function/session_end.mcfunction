@@ -8,5 +8,5 @@ execute if score #foll_tracker foll_initialized matches 0 run return 0
 tellraw @a {text:"Session has ended!", bold: true, color: "yellow"}
 
 #> set session not running
-scoreboard players set #foll_tracker foll_session_running 0
+function foll_limited:session_pause
 scoreboard players set #foll_tracker foll_session_time -1
