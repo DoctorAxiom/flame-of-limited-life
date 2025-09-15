@@ -1,4 +1,5 @@
 #> This function is run every tick when the game is active
+
 #> Gamemode checks
 execute as @a[tag=foll-limited-player, tag=!foll-ghost] run gamemode survival
 execute as @a[tag=foll-limited-player, tag=foll-ghost] run gamemode spectator 
@@ -90,12 +91,12 @@ execute if score #foll_tracker foll_session_time matches 36000 run tellraw @a {t
 execute if score #foll_tracker foll_session_time matches 12000 run tellraw @a {text:"10m remaining in this session.", color:"yellow", bold:true}
 execute if score #foll_tracker foll_session_time matches 6000 run tellraw @a {text:"5m remaining in this session.", color:"yellow", bold:true}
 execute if score #foll_tracker foll_session_time matches 1200 run tellraw @a {text:"1m remaining in this session!", color:"yellow", bold:true}
-execute if score #foll_tracker foll_session_time matches 200 run tellraw @a {text:"10 SECONDS REMAIN THIS SESSION!", color:"yellow", bold:true}
-execute if score #foll_tracker foll_session_time matches 100 run tellraw @a {text:"5s to session end.", color:"yellow", bold:true}
-execute if score #foll_tracker foll_session_time matches 80 run tellraw @a {text:"4s to session end.", color:"yellow", bold:true}
-execute if score #foll_tracker foll_session_time matches 60 run tellraw @a {text:"3s to session end.", color:"yellow", bold:true}
-execute if score #foll_tracker foll_session_time matches 40 run tellraw @a {text:"2s to session end.", color:"yellow", bold:true}
-execute if score #foll_tracker foll_session_time matches 20 run tellraw @a {text:"1s to session end.", color:"yellow", bold:true}
+execute if score #foll_tracker foll_session_time matches 200 run tellraw @a {text:"10 SECONDS REMAIN THIS SESSION!", color:"red", bold:true}
+execute if score #foll_tracker foll_session_time matches 100 run tellraw @a {text:"5s to session end.", color:"red", bold:true}
+execute if score #foll_tracker foll_session_time matches 80 run tellraw @a {text:"4s to session end.", color:"red", bold:true}
+execute if score #foll_tracker foll_session_time matches 60 run tellraw @a {text:"3s to session end.", color:"red", bold:true}
+execute if score #foll_tracker foll_session_time matches 40 run tellraw @a {text:"2s to session end.", color:"red", bold:true}
+execute if score #foll_tracker foll_session_time matches 20 run tellraw @a {text:"1s to session end.", color:"red", bold:true}
 
 execute if score #foll_tracker foll_session_time matches 0.. run scoreboard players remove #foll_tracker foll_session_time 1
 

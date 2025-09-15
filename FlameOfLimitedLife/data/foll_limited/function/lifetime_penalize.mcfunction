@@ -6,6 +6,7 @@
 
 $scoreboard players remove @s foll_player_lifetime $(ticks)
 
+title @s clear
 title @s times 10 30 20
 $title @s subtitle {text:"$(subtitle)", color:"yellow"}
 $title @s title {text:"$(title)", color:"red"}

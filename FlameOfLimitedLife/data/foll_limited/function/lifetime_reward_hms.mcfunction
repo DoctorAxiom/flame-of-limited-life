@@ -6,6 +6,7 @@
 
 $scoreboard players add @s foll_player_lifetime $(ticks)
 
+title @s clear
 title @s times 5 10 20
 $title @s subtitle {text:"$(subtitle)", color:"yellow"}
 $title @s title {text:"+$(h)$(hunit)$(m)$(munit)$(s)$(sunit)", color:"green"}

@@ -33,6 +33,8 @@ scoreboard objectives remove foll_green_life
 scoreboard objectives remove foll_yellow_life
 scoreboard objectives remove foll_red_life
 scoreboard objectives remove foll_session_duration
+scoreboard objectives remove foll_boogey_choosing_delay
+scoreboard objectives remove foll_number_of_boogeymen
 scoreboard objectives remove foll_kill_reward
 scoreboard objectives remove foll_kill_penalty
 scoreboard objectives remove foll_death_penalty
@@ -45,6 +47,8 @@ scoreboard objectives add foll_green_life dummy
 scoreboard objectives add foll_yellow_life dummy
 scoreboard objectives add foll_red_life dummy
 scoreboard objectives add foll_session_duration dummy
+scoreboard objectives add foll_boogey_choosing_delay dummy
+scoreboard objectives add foll_number_of_boogeymen dummy
 scoreboard objectives add foll_kill_reward dummy
 scoreboard objectives add foll_kill_penalty dummy
 scoreboard objectives add foll_death_penalty dummy
@@ -58,8 +62,9 @@ scoreboard players set #foll_tracker foll_green_life 576000
 scoreboard players set #foll_tracker foll_yellow_life 288000
 scoreboard players set #foll_tracker foll_red_life 144000
 scoreboard players set #foll_tracker foll_session_duration 144000
+scoreboard players set #foll_tracker foll_boogey_choosing_delay 6000
 scoreboard players set #foll_tracker foll_kill_reward 18000
-scoreboard players set #foll_tracker foll_kill_penalty 12000
+scoreboard players set #foll_tracker foll_kill_penalty 18000
 scoreboard players set #foll_tracker foll_death_penalty 24000
 scoreboard players set #foll_tracker foll_boogey_multiplier 3
 scoreboard players set #foll_tracker foll_advancement_reward 600
@@ -72,10 +77,15 @@ scoreboard objectives add foll_teamloop_index dummy
 scoreboard players set #foll_tracker foll_teamloop_index 0
 
 #> Player specific tracking objectives
+scoreboard objectives remove foll_alive_player_count
+
 scoreboard objectives remove foll_player_lifetime
 scoreboard objectives remove foll_player_lifetime_h
 scoreboard objectives remove foll_player_lifetime_m
 scoreboard objectives remove foll_player_lifetime_s
+
+scoreboard objectives add foll_alive_player_count dummy
+scoreboard players set #foll_tracker foll_alive_player_count 0
 
 scoreboard objectives add foll_player_lifetime dummy
 scoreboard objectives add foll_player_lifetime_h dummy

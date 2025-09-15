@@ -1,6 +1,9 @@
 #> Called as a particular player who has completely run out of lifetime
 # @s must refer to the player who just had the detected life out
 
+#remove one from the registered player count.
+scoreboard players remove #foll_tracker foll_alive_player_count 1
+
 tag @s add foll-ghost
 particle minecraft:raid_omen ~ ~ ~ 0.15 0.15 0.15 3 18 force
 particle minecraft:trial_spawner_detection_ominous ~ ~ ~ 0 40 0 0 128 force
