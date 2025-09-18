@@ -63,6 +63,7 @@ scoreboard players set #foll_tracker foll_yellow_life 288000
 scoreboard players set #foll_tracker foll_red_life 144000
 scoreboard players set #foll_tracker foll_session_duration 144000
 scoreboard players set #foll_tracker foll_boogey_choosing_delay 6000
+scoreboard players set #foll_tracker foll_number_of_boogeymen 1
 scoreboard players set #foll_tracker foll_kill_reward 18000
 scoreboard players set #foll_tracker foll_kill_penalty 18000
 scoreboard players set #foll_tracker foll_death_penalty 24000

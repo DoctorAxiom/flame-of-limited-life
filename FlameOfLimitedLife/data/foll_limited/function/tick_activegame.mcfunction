@@ -42,6 +42,15 @@ execute as @a[tag=foll-limited-player, scores={foll_player_deathdetect=1..}] run
 #> Detect player kills
 execute as @a[tag=foll-limited-player, tag=!foll-ghost] run function foll_limited:tick_killdetect
 
+#> Choose Boogeymen as appropriate
+function foll_limited:tick_boogeychoose
+
+#> Cure boogeymen who have dropped to red life (executes after player kill detect for last second kills.)
+execute as @a[tag=foll-limited-player, tag=foll-boogeyman] run execute if score @s foll_player_lifetime < #foll_tracker foll_red_life run function foll_limited:event_boogeyredclear
+
+
+#> Reset stuff below this for the next tick
+
 #> Reset all detection scores to 0
 scoreboard players set @a[tag=foll-limited-player] foll_player_deathdetect 0
 

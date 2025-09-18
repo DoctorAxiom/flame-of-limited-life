@@ -14,3 +14,5 @@ tellraw @a {text:"Session has started!", bold: true, color: "yellow"}
 
 scoreboard players operation #foll_tracker foll_session_time = #foll_tracker foll_session_duration
 function foll_limited:session_unpause
+
+execute as @a[tag=foll-limited-player, tag=foll-boogeyman] run function foll_limited:event_boogeyfail
