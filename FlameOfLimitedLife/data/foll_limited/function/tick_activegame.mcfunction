@@ -48,9 +48,6 @@ function foll_limited:tick_boogeychoose
 #> Cure boogeymen who have dropped to red life (executes after player kill detect for last second kills.)
 execute as @a[tag=foll-limited-player, tag=foll-boogeyman] run execute if score @s foll_player_lifetime < #foll_tracker foll_red_life run function foll_limited:event_boogeyredclear
 
-
-#> Reset stuff below this for the next tick
-
 #> Reset all detection scores to 0
 scoreboard players set @a[tag=foll-limited-player] foll_player_deathdetect 0
 
@@ -60,30 +57,6 @@ scoreboard players set @a[tag=foll-limited-player] foll_player_yellowkilldetect 
 scoreboard players set @a[tag=foll-limited-player] foll_player_redkilldetect 0
 
 scoreboard players set @a[tag=foll-limited-player] foll_player_mobkilldetect 0
-
-
-#> Reset triggers
-execute as @a[tag=foll-limited-player] if score @s foll_opmenu matches 1.. run scoreboard players set @s foll_opmenu 0
-execute as @a[tag=foll-limited-player] if score @s foll_playermenu matches 1.. run scoreboard players set @s foll_playermenu 0
-
-execute as @a[tag=foll-limited-player] if score @s foll_claimkill matches 1.. run scoreboard players set @s foll_claimkill 0
-execute as @a[tag=foll-limited-player] if score @s foll_claimaccident matches 1.. run scoreboard players set @s foll_claimaccident 0
-
-execute as @a[tag=foll-limited-player] if score @s foll_spawn_windcharge matches 1.. run scoreboard players set @s foll_spawn_windcharge 0
-execute as @a[tag=foll-limited-player] if score @s foll_spawn_notchapple matches 1.. run scoreboard players set @s foll_spawn_notchapple 0
-execute as @a[tag=foll-limited-player] if score @s foll_resistancetoggle matches 1.. run scoreboard players set @s foll_resistancetoggle 0
-execute as @a[tag=foll-limited-player] if score @s foll_weaknesstoggle matches 1.. run scoreboard players set @s foll_weaknesstoggle 0
-
-scoreboard players enable @a[tag=foll-limited-player] foll_opmenu
-scoreboard players enable @a[tag=foll-limited-player] foll_playermenu
-
-scoreboard players enable @a[tag=foll-limited-player] foll_claimkill
-scoreboard players enable @a[tag=foll-limited-player] foll_claimaccident
-
-scoreboard players enable @a[tag=foll-limited-player] foll_spawn_windcharge
-scoreboard players enable @a[tag=foll-limited-player] foll_spawn_notchapple
-scoreboard players enable @a[tag=foll-limited-player] foll_resistancetoggle
-scoreboard players enable @a[tag=foll-limited-player] foll_weaknesstoggle
 
 
 #> Decrement 1 each tick from the player lifetime

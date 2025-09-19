@@ -7,7 +7,10 @@ Please note this is currently a Work In Progress. you're not going to a full gam
 
 1. Find a seed you like where it has a good play area WITHIN 5000 blocks of spawn (some datapack features are buggy farther away from spawn).
 2. Set desired world border size and location using the worldborder command.
-3. Highly recommend ```/gamerule keep_inventory true``` on for this game.
-3. Copy the "FlameOfLimitedLife" folder from this repository into your datapacks folder.
-4. Invite all the friends you want to be in the game
-5. run ```/function foll_limited:setup_players```
+3. Set desired world spawn location.
+4. Create any pre-built structures you would like to have.
+5. Highly recommend ```/gamerule keep_inventory true``` on for this game.
+6. Copy the "FlameOfLimitedLife" folder from this repository into your datapacks folder.
+7. Invite all the friends you want to be in the game
+8. run ```/function foll_limited:setup_players```
+9. Set up other game parameters through the op menu (working on implementing this.)
