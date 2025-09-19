@@ -1,0 +1,72 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "Op Menu",
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": "This Menu requires operator permissions to use. It will not work if you do not have operator permissions"
+  },
+  "inputs": [],
+  "can_close_with_escape": true,
+  "yes": {
+    "label": "Save Changes"
+  },
+  "no": {
+    "label": "Cancel Changes"
+  },
+  "exit_action": {
+    "label": "Cancel"
+  },
+  "columns": 2,
+  "actions": [
+    {
+      "label": "FOLL Settings Menu",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function foll_limited:menu_follsettings"
+      }
+    },
+    {
+      "label": "Setup/Adjustment Menu",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function foll_limited:menu_follsettings"
+      }
+    },
+    {
+      "label": "",
+      "width": 1
+    },
+    {
+      "label": "",
+      "width": 1
+    },
+    {
+      "label": "Pause Session",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function foll_limited:session_pause"
+      }
+    },
+    {
+      "label": "Unpause Session",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function foll_limited:session_unpause"
+      }
+    },
+    {
+      "label": "Start Session",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function foll_limited:session_start"
+      }
+    },
+    {
+      "label": "End Session",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function foll_limited:session_end"
+      }
+    }
+  ]
+}
