@@ -7,7 +7,7 @@ execute if score #foll_tracker foll_initialized matches 0 run return 0
 execute if score #foll_tracker foll_session_running matches 1.. run function foll_limited:tick_activegame
 execute if score #foll_tracker foll_session_running matches 0 run function foll_limited:tick_inactivegame
 
-#> Detect opmenu
+#> Detect opmenu (needs to be accessible outside of active game)
 execute as @a run execute if score @s foll_opmenu matches 1.. run dialog show @s foll_limited:op_menu
 
 #> Reset triggers
@@ -22,7 +22,7 @@ execute as @a[tag=foll-limited-player] if score @s foll_spawn_notchapple matches
 execute as @a[tag=foll-limited-player] if score @s foll_resistancetoggle matches 1.. run scoreboard players set @s foll_resistancetoggle 0
 execute as @a[tag=foll-limited-player] if score @s foll_weaknesstoggle matches 1.. run scoreboard players set @s foll_weaknesstoggle 0
 
-scoreboard players enable @a[tag=foll-limited-player] foll_opmenu
+scoreboard players enable @a foll_opmenu
 scoreboard players enable @a[tag=foll-limited-player] foll_playermenu
 
 scoreboard players enable @a[tag=foll-limited-player] foll_claimkill

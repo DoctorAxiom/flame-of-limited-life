@@ -33,15 +33,15 @@ $data modify storage foll_limited:tmp follsettingsvar.advancementreward set valu
 $data modify storage foll_limited:tmp follsettingsvar.bigadvancementreward set value $(bigadvancementreward)
 
 
-execute store result score #foll_tracker foll_session_duration run data get storage foll_limited:tmp follsettingsvar.sessiondurationm 60
-execute store result score #foll_tracker foll_starting_life run data get storage foll_limited:tmp follsettingsvar.startlifem 60
-execute store result score #foll_tracker foll_green_life run data get storage foll_limited:tmp follsettingsvar.greenlifem 60
-execute store result score #foll_tracker foll_yellow_life run data get storage foll_limited:tmp follsettingsvar.yellowlifem 60
-execute store result score #foll_tracker foll_red_life run data get storage foll_limited:tmp follsettingsvar.redlifem 60
-execute store result score #foll_tracker foll_kill_reward run data get storage foll_limited:tmp follsettingsvar.killrewardm 60
-execute store result score #foll_tracker foll_kill_penalty run data get storage foll_limited:tmp follsettingsvar.killpenaltym 60
-execute store result score #foll_tracker foll_death_penalty run data get storage foll_limited:tmp follsettingsvar.deathpenaltym 60
-execute store result score #foll_tracker foll_boogey_choosing_delay run data get storage foll_limited:tmp follsettingsvar.boogeydelaym 60
+execute store result score #foll_tracker foll_session_duration run data get storage foll_limited:tmp follsettingsvar.sessiondurationm 1200
+execute store result score #foll_tracker foll_starting_life run data get storage foll_limited:tmp follsettingsvar.startlifem 1200
+execute store result score #foll_tracker foll_green_life run data get storage foll_limited:tmp follsettingsvar.greenlifem 1200
+execute store result score #foll_tracker foll_yellow_life run data get storage foll_limited:tmp follsettingsvar.yellowlifem 1200
+execute store result score #foll_tracker foll_red_life run data get storage foll_limited:tmp follsettingsvar.redlifem 1200
+execute store result score #foll_tracker foll_kill_reward run data get storage foll_limited:tmp follsettingsvar.killrewardm 1200
+execute store result score #foll_tracker foll_kill_penalty run data get storage foll_limited:tmp follsettingsvar.killpenaltym 1200
+execute store result score #foll_tracker foll_death_penalty run data get storage foll_limited:tmp follsettingsvar.deathpenaltym 1200
+execute store result score #foll_tracker foll_boogey_choosing_delay run data get storage foll_limited:tmp follsettingsvar.boogeydelaym 1200
 execute store result score #foll_tracker foll_number_of_boogeymen run data get storage foll_limited:tmp follsettingsvar.boogeynum 1
 execute store result score #foll_tracker foll_boogey_multiplier run data get storage foll_limited:tmp follsettingsvar.boogeymultiplier 1
 execute store result score #foll_tracker foll_mobkill_reward run data get storage foll_limited:tmp follsettingsvar.mobkillreward 1

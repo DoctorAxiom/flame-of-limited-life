@@ -1,0 +1,67 @@
+{
+  "type": "minecraft:multi_action",
+  "title": "FOLL Player Menu",
+  "body": {
+    "type": "minecraft:plain_message",
+    "contents": "This menu contains options for both active and ghost players."
+  },
+  "can_close_with_escape": true,
+  "exit_action": {
+    "label": "Cancel"
+  },
+  "columns": 2,
+  "actions": [
+    {
+      "label": "Claim Valid Kill",
+      "tooltip": "Used to claim that you've killed a player for which you should be rewarded, and the game has not properly detected it.",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger foll_claimkill"
+      }
+    },
+    {
+      "label": "Admit Bad Kill",
+      "tooltip": "Used to claim that you accidentally killed a player you shouldn't, and the game has not properly detected it.",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger foll_claimaccident"
+      }
+    },
+    {
+      "label": "",
+      "width": 1
+    },
+    {
+      "label": "",
+      "width": 1
+    },
+    {
+      "label": "Ghost- Toggle Resistance",
+      "tooltip": "Applies resistance to the currently spectated player or entity"
+    },
+    {
+      "label": "Ghost- Toggle Weakness",
+      "tooltip": "Applies weakness to the currently spectated player or entity "
+    },
+    {
+      "label": "Ghost- Spawn Windcharge",
+      "tooltip": "Spawns a windcharge at your current location in the direction you are looking. Has a 5 second cooldown."
+    },
+    {
+      "label": "Ghost- Spawn Notch Apple",
+      "tooltip": "Spawn an Enchanted Golden Apple at your current location. Has a 1 hour cooldown."
+    },
+    {
+      "label": "Ghost- Fill Hunger",
+      "tooltip": "Fill up the hunger of whoever you are currently spectating. No Cooldown."
+    },
+    {
+      "label": "Ghost- Stop Possessing",
+      "tooltip": "Stop spectating a player or other entity. Equivalent to typing /spectate in the command bar.",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "spectate"
+      }
+    }
+  ]
+}

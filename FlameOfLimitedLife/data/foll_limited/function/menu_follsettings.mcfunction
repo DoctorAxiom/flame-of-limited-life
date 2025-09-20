@@ -37,6 +37,16 @@ scoreboard players operation #foll_tracker2 foll_kill_penalty /= #foll_tracker f
 scoreboard players operation #foll_tracker2 foll_death_penalty /= #foll_tracker foll_60_const
 scoreboard players operation #foll_tracker2 foll_boogey_choosing_delay /= #foll_tracker foll_60_const
 
+scoreboard players operation #foll_tracker2 foll_session_duration /= #foll_tracker foll_20_const
+scoreboard players operation #foll_tracker2 foll_starting_life /= #foll_tracker foll_20_const
+scoreboard players operation #foll_tracker2 foll_green_life /= #foll_tracker foll_20_const
+scoreboard players operation #foll_tracker2 foll_yellow_life /= #foll_tracker foll_20_const
+scoreboard players operation #foll_tracker2 foll_red_life /= #foll_tracker foll_20_const
+scoreboard players operation #foll_tracker2 foll_kill_reward /= #foll_tracker foll_20_const
+scoreboard players operation #foll_tracker2 foll_kill_penalty /= #foll_tracker foll_20_const
+scoreboard players operation #foll_tracker2 foll_death_penalty /= #foll_tracker foll_20_const
+scoreboard players operation #foll_tracker2 foll_boogey_choosing_delay /= #foll_tracker foll_20_const
+
 
 execute store result storage foll_limited:tmp follsettingsvar.sessiondurationm int 1 run scoreboard players get #foll_tracker2 foll_session_duration
 execute store result storage foll_limited:tmp follsettingsvar.startlifem int 1 run scoreboard players get #foll_tracker2 foll_starting_life
