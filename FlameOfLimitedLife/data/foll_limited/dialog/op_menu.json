@@ -29,7 +29,7 @@
       "label": "Setup/Adjustment Menu",
       "action": {
         "type": "minecraft:run_command",
-        "command": "function foll_limited:menu_follsettings"
+        "command": "function foll_limited:menu_setupadj"
       }
     },
     {
