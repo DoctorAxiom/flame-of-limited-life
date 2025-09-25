@@ -8,7 +8,7 @@ Please note this is currently a **Work In Progress**. It's pretty much completel
 # Initial Set up
 
 1. Find a seed you like where it has a good play area WITHIN 5000 blocks of spawn (some datapack features are buggy farther away from spawn).
-2. Set desired world border size and location using the worldborder command.
+2. Set desired world border size and location using the worldborder command. Highly recommend not exceeding 1250 meters for the width of the world border.
 3. Set desired world spawn location.
 4. Create any pre-built structures you would like to have using the ```/place ``` command or manually building them
 5. Highly recommend ```/gamerule keep_inventory true``` on for this game. If you are playing a shorter game (<12hours) consider increasing the random tick speed with ```/gamerule randomTickSpeed 6 ``` (the default is 3)
