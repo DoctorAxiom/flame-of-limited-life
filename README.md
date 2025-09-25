@@ -7,12 +7,13 @@ Please note this is currently a **Work In Progress**. It's pretty much completel
 
 # Initial Set up
 
+0. There are some steps that are easier to set up if you start BEFORE installing the datapack, which only happens on step 6.
 1. Find a seed you like where it has a good play area WITHIN 5000 blocks of spawn (some datapack features are buggy farther away from spawn).
 2. Set desired world border size and location using the worldborder command. Highly recommend not exceeding 1250 meters for the width of the world border.
 3. Set desired world spawn location.
 4. Create any pre-built structures you would like to have using the ```/place ``` command or manually building them
 5. Highly recommend ```/gamerule keep_inventory true``` on for this game. If you are playing a shorter game (<12hours) consider increasing the random tick speed with ```/gamerule randomTickSpeed 6 ``` (the default is 3)
-6. Copy the "FlameOfLimitedLife" folder from this repository into your datapacks folder.
+6. Install the datapack by copying the "FlameOfLimitedLife" folder from this repository into your datapacks folder.
 7. Invite all the friends you want to be in the game
 8. run ```/trigger foll_op_menu ``` as operator to get the privileged menu. Click on "Setup/Adjustment Menu", and click on "Setup Current Players" to register all current players.
 	- Alternatively you can run the command ```function foll_limited:setup_players``` (which is what going through the above menu does.)
@@ -43,5 +44,5 @@ Please note this is currently a **Work In Progress**. It's pretty much completel
 # Notes/FAQ
 
 - **Ticks to real time** - If you are making manual adjustments to the session time or player lifetimes, please note that there are 20 ticks in a second. Use a calculator to calculate how many ticks are in the amount of time you wish to add (or do it in your head if you are smarter than me).
-- **Resurrecting a Ghost Player** - ghosts are tracked both by a low score and a tag foll-ghost. To resurrect a ghost player, first use the op menu to manually add time to the player you want to resurrect. Then run ```/tag <Player Name> remove foll-ghost```. This will resurrect the player into an active player. This should be a relatively rare occurrence, so I have intentionally not implemented a menu option for this.
+- **Resurrecting a Ghost Player** - Ghosts are resurrected at red life level by default. You may want to manually adjust their time further in the op menu after resurrecting a ghost.
 
