@@ -36,9 +36,11 @@ execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s anchored eyes posit
 #> Ghost abilities
 execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run function foll_limited:ghost_spawnwindcharge
 execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run function foll_limited:ghost_spawnnotchapple
+execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run function foll_limited:ghost_fillhunger
 execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run function foll_limited:ghost_applyresistance
-execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run function foll_limited:ghost_applyingweakness
+execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run function foll_limited:ghost_applyweakness
 
+execute as @a[tag=foll-limited-player, tag=foll-ghost, scores={foll_applyingweakness=0,foll_applyingresistance=0}] run title @s actionbar " "
 execute as @a[tag=foll-limited-player, tag=foll-ghost, scores={foll_applyingweakness=0,foll_applyingresistance=1}] run title @s actionbar "You are applying RESISTANCE to players or mobs you spectate."
 execute as @a[tag=foll-limited-player, tag=foll-ghost, scores={foll_applyingweakness=1,foll_applyingresistance=0}] run title @s actionbar "You are applying WEAKNESS to players or mobs you spectate."
 execute as @a[tag=foll-limited-player, tag=foll-ghost, scores={foll_applyingweakness=1,foll_applyingresistance=1}] run title @s actionbar "You are applying RESISTANCE and WEAKNESS to anyone you spectate."
