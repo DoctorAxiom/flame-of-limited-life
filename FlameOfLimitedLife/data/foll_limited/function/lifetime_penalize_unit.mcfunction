@@ -40,4 +40,10 @@ execute if score #foll_tracker foll_player_lifetime_m matches 1.. run data modif
 execute if score #foll_tracker foll_player_lifetime_s matches 1.. store result storage foll_limited:tmp lifetimevar.s int 1 run scoreboard players get #foll_tracker foll_player_lifetime_s
 execute if score #foll_tracker foll_player_lifetime_s matches 1.. run data modify storage foll_limited:tmp lifetimevar.sunit set value "s"
 
+execute if score #foll_tracker foll_player_lifetime matches 0..19 store result storage foll_limited:tmp lifetimevar.s int 5 run scoreboard players get #foll_tracker foll_player_lifetime
+execute if score #foll_tracker foll_player_lifetime matches 0..19 run data modify storage foll_limited:tmp lifetimevar.munit set value "."
+execute if score #foll_tracker foll_player_lifetime matches 0..1 run data modify storage foll_limited:tmp lifetimevar.munit set value ".0"
+execute if score #foll_tracker foll_player_lifetime matches 0..19 run data modify storage foll_limited:tmp lifetimevar.sunit set value "s"
+
+
 function foll_limited:lifetime_penalize_hms with storage foll_limited:tmp lifetimevar

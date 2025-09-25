@@ -112,6 +112,22 @@ scoreboard objectives add foll_player_zpos dummy
 scoreboard objectives add foll_player_xrot dummy
 scoreboard objectives add foll_player_yrot dummy
 
+scoreboard players set #foll_shootdir foll_player_xpos 0
+scoreboard players set #foll_shootdir foll_player_ypos 0
+scoreboard players set #foll_shootdir foll_player_zpos 0
+
+scoreboard objectives remove foll_applyingresistance
+scoreboard objectives remove foll_applyingweakness
+scoreboard objectives remove foll_notchapple_cooldown
+scoreboard objectives remove foll_windcharge_cooldown
+
+scoreboard objectives add foll_applyingresistance dummy
+scoreboard objectives add foll_applyingweakness dummy
+scoreboard objectives add foll_notchapple_cooldown dummy
+scoreboard objectives add foll_windcharge_cooldown dummy
+
+scoreboard players set #foll_tracker foll_notchapple_cooldown 72000
+scoreboard players set #foll_tracker foll_windcharge_cooldown 100
 
 #> Detection objectives for killing different colors, mobs, deaths
 scoreboard objectives remove foll_player_deathdetect
@@ -162,6 +178,7 @@ scoreboard objectives add foll_playermenu trigger
 scoreboard objectives add foll_claimkill trigger
 scoreboard objectives add foll_claimaccident trigger
 
+scoreboard objectives add foll_refill_hunger trigger
 scoreboard objectives add foll_spawn_windcharge trigger
 scoreboard objectives add foll_spawn_notchapple trigger
 scoreboard objectives add foll_resistancetoggle trigger

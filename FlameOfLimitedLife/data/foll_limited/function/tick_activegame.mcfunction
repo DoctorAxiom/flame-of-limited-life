@@ -31,7 +31,10 @@ execute as @a[tag=foll-limited-player] run function foll_limited:lifetimetagloop
 execute as @a[tag=foll-limited-player] run function foll_limited:store_player_pos
 
 #> Ghost effects
-execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run particle minecraft:ominous_spawning ~ ~1.5 ~ 0.2 0.2 0.2 0.2 1 force
+execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s anchored eyes positioned ^ ^ ^ run function foll_limited:ghost_effects
+
+#> Ghost abilities
+execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run function foll_limited:ghost_spawnwindcharge
 
 #> Detect player mob kills
 execute as @a[tag=foll-limited-player, scores={foll_player_mobkilldetect=1..}] run function foll_limited:event_mobkill

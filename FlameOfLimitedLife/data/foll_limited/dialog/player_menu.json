@@ -37,23 +37,43 @@
     },
     {
       "label": "Ghost- Toggle Resistance",
-      "tooltip": "Applies resistance to the currently spectated player or entity"
+      "tooltip": "Applies resistance to the currently spectated player or entity",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger foll_resistancetoggle"
+      }
     },
     {
       "label": "Ghost- Toggle Weakness",
-      "tooltip": "Applies weakness to the currently spectated player or entity "
+      "tooltip": "Applies weakness to the currently spectated player or entity",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger foll_weaknesstoggle"
+      }
     },
     {
       "label": "Ghost- Spawn Windcharge",
-      "tooltip": "Spawns a windcharge at your current location in the direction you are looking. Has a 5 second cooldown."
+      "tooltip": "Spawns a windcharge at your current location in the direction you are looking. Has a 5 second cooldown.",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger foll_spawn_windcharge"
+      }
     },
     {
       "label": "Ghost- Spawn Notch Apple",
-      "tooltip": "Spawn an Enchanted Golden Apple at your current location. Has a 1 hour cooldown."
+      "tooltip": "Spawn an Enchanted Golden Apple at your current location. Has a 1 hour cooldown.",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger foll_spawn_notchapple"
+      }
     },
     {
       "label": "Ghost- Fill Hunger",
-      "tooltip": "Fill up the hunger of whoever you are currently spectating. No Cooldown."
+      "tooltip": "Fill up the hunger of whoever you are currently spectating. No Cooldown.",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "trigger foll_refill_hunger"
+      }
     },
     {
       "label": "Ghost- Stop Possessing",

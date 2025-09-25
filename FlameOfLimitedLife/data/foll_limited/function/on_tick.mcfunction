@@ -17,6 +17,7 @@ execute as @a[tag=foll-limited-player] if score @s foll_playermenu matches 1.. r
 execute as @a[tag=foll-limited-player] if score @s foll_claimkill matches 1.. run scoreboard players set @s foll_claimkill 0
 execute as @a[tag=foll-limited-player] if score @s foll_claimaccident matches 1.. run scoreboard players set @s foll_claimaccident 0
 
+execute as @a[tag=foll-limited-player] if score @s foll_refill_hunger matches 1.. run scoreboard players set @s foll_refill_hunger 0
 execute as @a[tag=foll-limited-player] if score @s foll_spawn_windcharge matches 1.. run scoreboard players set @s foll_spawn_windcharge 0
 execute as @a[tag=foll-limited-player] if score @s foll_spawn_notchapple matches 1.. run scoreboard players set @s foll_spawn_notchapple 0
 execute as @a[tag=foll-limited-player] if score @s foll_resistancetoggle matches 1.. run scoreboard players set @s foll_resistancetoggle 0
@@ -28,6 +29,7 @@ scoreboard players enable @a[tag=foll-limited-player] foll_playermenu
 scoreboard players enable @a[tag=foll-limited-player] foll_claimkill
 scoreboard players enable @a[tag=foll-limited-player] foll_claimaccident
 
+scoreboard players enable @a[tag=foll-limited-player] foll_refill_hunger
 scoreboard players enable @a[tag=foll-limited-player] foll_spawn_windcharge
 scoreboard players enable @a[tag=foll-limited-player] foll_spawn_notchapple
 scoreboard players enable @a[tag=foll-limited-player] foll_resistancetoggle
@@ -35,6 +37,6 @@ scoreboard players enable @a[tag=foll-limited-player] foll_weaknesstoggle
 
 #> Display title to unregistered players.
 execute as @a[tag=!foll-limited-player] run title @s times 0 10 0
-execute as @a[tag=!foll-limited-player] run title @s subtitle {text:"Ask an op to run setup_players", color:"aqua"}
+execute as @a[tag=!foll-limited-player] run title @s subtitle {text:"Ask an op to Setup Current Players", color:"aqua"}
 execute as @a[tag=!foll-limited-player] run title @s title {text:"You are not set-up!", color:"yellow"}
 

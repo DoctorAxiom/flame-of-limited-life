@@ -4,6 +4,12 @@
 #remove one from the registered player count.
 scoreboard players remove #foll_tracker foll_alive_player_count 1
 
+#make sure ghost ability tracking scores are set up for this player
+scoreboard players set @s foll_applyingresistance 0
+scoreboard players set @s foll_applyingweakness 0
+scoreboard players set @s foll_notchapple_cooldown 0
+scoreboard players set @s foll_windcharge_cooldown 0
+
 tag @s add foll-ghost
 particle minecraft:raid_omen ~ ~ ~ 0.15 0.15 0.15 3 18 force
 particle minecraft:trial_spawner_detection_ominous ~ ~ ~ 0 40 0 0 128 force

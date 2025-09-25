@@ -2,7 +2,7 @@
 # This autopopulates the setupadjvar with a list of current players as well as multiple outtemp vars
 
 setblock ~ -64 ~ minecraft:barrel{Items:[]}
-data modify storage foll_limited:tmp setupadjvar.playerlist set value []
+data modify storage foll_limited:tmp setupadjvar.playerlist set value ["[---None---]"]
 
 execute as @a[tag=foll-limited-player] positioned ~ ~ ~ run function foll_limited:dynamic_appendplayerlist
 
