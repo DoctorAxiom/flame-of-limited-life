@@ -20,6 +20,26 @@ Please note this is currently a **Work In Progress**. It's pretty much completel
 10. Make sure your players have their "Quick Options" bound to a key (default G) because this can be used to access the player menu quickly.
 11. When you are ready to start the first session, the bottom of the main op menu (which you get with ```/trigger foll_op_menu```) has a "Start Session" button. The game automatically times the session based on the number of gameticks.
 
+
+# Rules
+
+0. The game runs in fixed sessions that last a certain amount of time.
+1. Every player starts with an amount of time to live on the server. When you run out of time, you are made a ghost (permanently spectator.)
+	- Ghosts still have some limited abilities- they can spawn wind charges, spawn enchanted golden apples (notch apples), and give resistance and weakness or fill the hunger of players/mobs that they spectate.
+2. Every time you die, you lose a certain amount of your time to live.
+3. When you lose enough time, you become a yellow player.
+4. When you are critically low on time you become a red player.
+5. Yellow players can kill dark green players to receive some bonus time to live.
+6. Red players can kill ANY other player to receive some bonus time to live.
+7. Every session- some players are designated boogeymen. Boogeymen can kill ANY player in order to receive bonus time to live. Boogeymen receive a multiplier compared to other players making a valid kill.
+	- If a boogeyman fails to kill someone, the next session they will receive a multiplied penalty as if they had died.
+	- Red players cannot be boogeymen
+	- When a boogeyman is penalized the game will at MOST drop them to Red life threshold.
+8. Invalid kills (i.e. if you are a green player trying to kill someone and are not the boogeyman) ALSO deduct a penalty from your time to live
+9. Mob kills and acheivements also award small amounts to your time to live
+10. The last player standing wins the game.
+
+
 # Notes/FAQ
 
 - **Ticks to real time** - If you are making manual adjustments to the session time or player lifetimes, please note that there are 20 ticks in a second. Use a calculator to calculate how many ticks are in the amount of time you wish to add (or do it in your head if you are smarter than me).
