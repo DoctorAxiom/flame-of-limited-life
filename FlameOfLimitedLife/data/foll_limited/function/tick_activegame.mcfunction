@@ -35,6 +35,7 @@ execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s anchored eyes posit
 
 #> Ghost abilities
 execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run function foll_limited:ghost_spawnwindcharge
+execute as @a[tag=foll-limited-player, tag=foll-ghost] at @s run function foll_limited:ghost_spawnnotchapple
 
 #> Detect player mob kills
 execute as @a[tag=foll-limited-player, scores={foll_player_mobkilldetect=1..}] run function foll_limited:event_mobkill

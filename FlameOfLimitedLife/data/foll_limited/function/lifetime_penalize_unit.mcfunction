@@ -45,5 +45,4 @@ execute if score #foll_tracker foll_player_lifetime matches 0..19 run data modif
 execute if score #foll_tracker foll_player_lifetime matches 0..1 run data modify storage foll_limited:tmp lifetimevar.munit set value ".0"
 execute if score #foll_tracker foll_player_lifetime matches 0..19 run data modify storage foll_limited:tmp lifetimevar.sunit set value "s"
 
-
 function foll_limited:lifetime_penalize_hms with storage foll_limited:tmp lifetimevar
