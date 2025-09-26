@@ -15,4 +15,7 @@ title @s title {text:"Resurrected!", color:"green"}
 # Add one back to the still alive player count.
 scoreboard players add #foll_tracker foll_alive_player_count 1
 
+effect give @s absorption 6 4 true
+effect give @s resistance 6 4 true
+
 tellraw @a [{text:"[", color:"green"}, {selector:"@s"}, " was resurrected!]"]
