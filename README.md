@@ -44,5 +44,5 @@ Please note this is currently a **Work In Progress**. It's pretty much completel
 # Notes/FAQ
 
 - **Ticks to real time** - If you are making manual adjustments to the session time or player lifetimes, please note that there are 20 ticks in a second. Use a calculator to calculate how many ticks are in the amount of time you wish to add (or do it in your head if you are smarter than me).
-- **Resurrecting a Ghost Player** - Ghosts are resurrected at red life level by default. You may want to manually adjust their time further in the op menu after resurrecting a ghost.
+- **Resurrecting a Ghost Player** - Ghosts are resurrected at red life level by default, and are resurrected at their current position as spectator. **Make sure the player you are about to resurrect is in a safe location and not floating too high above the ground!** You may want to manually adjust their lifetime further in the op menu after resurrecting a ghost.
 
