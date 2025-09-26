@@ -24,7 +24,7 @@ Please note this is currently a **Work In Progress**. It's pretty much completel
 
 # Rules
 
-0. The game runs in fixed sessions that last a certain amount of time.
+0. The game runs in fixed sessions that last a certain amount of time. When a session is not active, everyone is placed in spectator mode.
 1. Every player starts with an amount of time to live on the server. When you run out of time, you are made a ghost (permanently spectator.)
 	- Ghosts still have some limited abilities- they can spawn wind charges, spawn enchanted golden apples (notch apples), and give resistance and weakness or fill the hunger of players/mobs that they spectate.
 2. Every time you die, you lose a certain amount of your time to live.
