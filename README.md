@@ -8,7 +8,7 @@ Please note this is currently a **Work In Progress**. It's pretty much completel
 # Initial Set up
 
 0. There are some steps that are easier to set up if you start BEFORE installing the datapack, which only happens on step 6.
-1. Find a seed you like where it has a good play area WITHIN 5000 blocks of spawn (some datapack features are buggy farther away from spawn).
+1. Find a seed you like where it has a good play area WITHIN 5000 blocks of 0,0 (some datapack features are buggy farther away from world origin).
 2. Set desired world border size and location using the worldborder command. Highly recommend not exceeding 1250 meters for the width of the world border.
 3. Set desired world spawn location.
 4. Create any pre-built structures you would like to have using the ```/place ``` command or manually building them
