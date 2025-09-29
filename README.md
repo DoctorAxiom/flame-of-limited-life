@@ -9,7 +9,7 @@ Please note this is still a **Work In Progress**. I feel like it will work compl
 
 # Initial Set up
 
-0. There are some steps that are easier to set up if you start BEFORE installing the datapack, which only happens on step 6.
+0. There are some steps that are easier to set up if you start BEFORE installing the datapack, which only happens on step 6. After you install the datapack your gamemode will be forced to either spectator or survival.
 1. Find a seed you like where it has a good play area WITHIN 5000 blocks of 0,0 (some datapack features are buggy farther away from world origin).
 2. Set desired world border size and location using the worldborder command. Highly recommend not exceeding 1250 meters for the width of the world border.
 3. Set desired world spawn location.
@@ -26,7 +26,7 @@ Please note this is still a **Work In Progress**. I feel like it will work compl
 
 # Rules
 
-0. The game runs in fixed sessions that last a certain amount of time.
+0. The game runs in fixed sessions that last a certain amount of time. When a session is not active, everyone is placed in spectator mode.
 1. Every player starts with an amount of time to live on the server. When you run out of time, you are made a ghost (permanently spectator.)
 	- Ghosts still have some limited abilities- they can spawn wind charges, spawn enchanted golden apples (notch apples), and give resistance and weakness or fill the hunger of players/mobs that they spectate.
 2. Every time you die, you lose a certain amount of your time to live.
