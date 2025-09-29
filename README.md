@@ -1,6 +1,8 @@
 # Flame of Limited Life
 A datapack for minecraft enabling play of a game similar to Grian's Limited Life, initially created for the Flame of Life gaming group.
 
+This pack is meant for version 1.21.8. It will likely work on 1.21.9- but may not give bonuses for all the new advancements introduced in 1.21.9
+
 Please note this is still a **Work In Progress**. I feel like it will work completely, but it has not yet been tested in a complete game. There may be bugs still present.
 
 **This datapack is meant to be run once per world for a self contained game.**
