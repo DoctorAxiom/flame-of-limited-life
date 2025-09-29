@@ -36,6 +36,9 @@ scoreboard players operation #foll_2tracker foll_player_badkilldetect = #foll_tr
 scoreboard players operation #foll_2tracker foll_player_goodkilldetect *= @s foll_player_goodkilldetect
 scoreboard players operation #foll_2tracker foll_player_badkilldetect *= @s foll_player_badkilldetect
 
+# tellraw @s {text:"Calculated penalty: " , extra:[{score: {name: "#foll_2tracker", objective: "foll_player_badkilldetect"}}] }
+# tellraw @s {text:"calculated reward: " , extra:[{score: {name: "#foll_2tracker", objective: "foll_player_goodkilldetect"}}] }
+
 #boogey kill checks.
 execute if entity @s[tag=foll-boogeyman, scores={foll_player_goodkilldetect=1..}] run scoreboard players operation #foll_2tracker foll_player_goodkilldetect *= #foll_tracker foll_boogey_multiplier
 execute if entity @s[tag=foll-boogeyman, scores={foll_player_goodkilldetect=1..}] store result storage foll_limited:tmp lifetimevar.ticks int 1 run scoreboard players get #foll_2tracker foll_player_goodkilldetect
@@ -43,17 +46,17 @@ execute if entity @s[tag=foll-boogeyman, scores={foll_player_goodkilldetect=1..}
 execute if entity @s[tag=foll-boogeyman, scores={foll_player_goodkilldetect=1..}] run function foll_limited:lifetime_reward_unit with storage foll_limited:tmp lifetimevar
 
 #add goodkill reward and subtract badkill penalties to get a final amount
-scoreboard players operation #foll_2tracker foll_player_lifetime = #foll_tracker foll_player_goodkilldetect
-scoreboard players operation #foll_2tracker foll_player_lifetime -= #foll_tracker foll_player_badkilldetect
+scoreboard players operation #foll_2tracker foll_player_lifetime = #foll_2tracker foll_player_goodkilldetect
+scoreboard players operation #foll_2tracker foll_player_lifetime -= #foll_2tracker foll_player_badkilldetect
 
 # execute store result storage foll_limited:tmp debug int 1 run scoreboard players get #2foll_tracker foll_player_lifetime
 # tellraw @s {text:"Final tick change: " , extra:[{type:"nbt", nbt:"debug", storage:"foll_limited:tmp"}] }
 
-execute if entity @s[tag=!foll-boogeyman, scores={foll_player_goodkilldetect=1.., foll_player_badkilldetect=0}] store result storage foll_limited:tmp lifetimevar.ticks int 1 run scoreboard players get #foll_tracker foll_player_lifetime
+execute if entity @s[tag=!foll-boogeyman, scores={foll_player_goodkilldetect=1.., foll_player_badkilldetect=0}] store result storage foll_limited:tmp lifetimevar.ticks int 1 run scoreboard players get #foll_2tracker foll_player_lifetime
 execute if entity @s[tag=!foll-boogeyman, scores={foll_player_goodkilldetect=1.., foll_player_badkilldetect=0}] run data modify storage foll_limited:tmp lifetimevar.subtitle set value "Valid player kill!"
 execute if entity @s[tag=!foll-boogeyman, scores={foll_player_goodkilldetect=1.., foll_player_badkilldetect=0}] run function foll_limited:lifetime_reward_unit with storage foll_limited:tmp lifetimevar
 
-execute if entity @s[tag=!foll-boogeyman, scores={foll_player_goodkilldetect=0, foll_player_badkilldetect=1..}] store result storage foll_limited:tmp lifetimevar.ticks int -1 run scoreboard players get #foll_tracker foll_player_lifetime
+execute if entity @s[tag=!foll-boogeyman, scores={foll_player_goodkilldetect=0, foll_player_badkilldetect=1..}] store result storage foll_limited:tmp lifetimevar.ticks int -1 run scoreboard players get #foll_2tracker foll_player_lifetime
 execute if entity @s[tag=!foll-boogeyman, scores={foll_player_goodkilldetect=0, foll_player_badkilldetect=1..}] run data modify storage foll_limited:tmp lifetimevar.subtitle set value "Invalid player kill!"
 execute if entity @s[tag=!foll-boogeyman, scores={foll_player_goodkilldetect=0, foll_player_badkilldetect=1..}] run function foll_limited:lifetime_penalize_unit with storage foll_limited:tmp lifetimevar
 

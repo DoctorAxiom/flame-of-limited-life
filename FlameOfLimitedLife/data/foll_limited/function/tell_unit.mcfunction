@@ -36,8 +36,8 @@ execute if score #foll_calc foll_player_lifetime_s matches 1.. store result stor
 execute if score #foll_calc foll_player_lifetime_s matches 1.. run data modify storage foll_limited:tmp tellvar.sunit set value "s"
 
 execute if score #foll_calc foll_player_lifetime matches 0..19 store result storage foll_limited:tmp tellvar.s int 5 run scoreboard players get #foll_calc foll_player_lifetime
-execute if score #foll_calc foll_player_lifetime matches 0..19 run data modify storage foll_limited:tmp tellvar.munit set value "."
-execute if score #foll_calc foll_player_lifetime matches 0..1 run data modify storage foll_limited:tmp tellvar.munit set value ".0"
+execute if score #foll_calc foll_player_lifetime matches 0..19 run data modify storage foll_limited:tmp tellvar.munit set value "0."
+execute if score #foll_calc foll_player_lifetime matches 0..1 run data modify storage foll_limited:tmp tellvar.munit set value "0.0"
 execute if score #foll_calc foll_player_lifetime matches 0..19 run data modify storage foll_limited:tmp tellvar.sunit set value "s"
 
 function foll_limited:tell_hms with storage foll_limited:tmp tellvar
