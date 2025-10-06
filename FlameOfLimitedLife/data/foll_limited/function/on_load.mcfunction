@@ -6,6 +6,10 @@ scoreboard objectives add foll_initialized dummy
 #make sure session is not running
 function foll_limited:session_pause
 
+#> reset force loaded chunks to only forceload the spawn chunk
+forceload remove all
+forceload add ~ ~
+
 # if initialized already, will not reset, otherwise will initiate this scoreboard variable
 execute if score #foll_tracker foll_initialized matches 1 run return 0
 
